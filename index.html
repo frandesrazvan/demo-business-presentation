@@ -7,13 +7,13 @@
   <title>Business Presentation</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg">
   <script defer src="js/main.js"></script>
 </head>
 <body>
   <header class="fade-in-down">
     <nav class="navbar">
-      <div class="logo"><img src="logo.jpg" alt="Company Logo"></div>
+      <div class="logo"><img src="assets/images/logo.jpg" alt="Company Logo"></div>
       <div class="navbar-center">
         <ul class="nav-links">
           <li><a href="#home">Acasă</a></li>
@@ -24,26 +24,26 @@
         </ul>
       </div>
       <div class="styled-lang-switcher lang-switcher">
-        <button data-lang="ro" class="active"><img class="flag" src="flags/ro.svg" alt="RO"> RO</button>
-        <button data-lang="en"><img class="flag" src="flags/gb.svg" alt="EN"> EN</button>
-        <button data-lang="hu"><img class="flag" src="flags/hu.svg" alt="HU"> HU</button>
+        <button data-lang="ro" class="active"><img class="flag" src="assets/flags/ro.svg" alt="RO"> RO</button>
+        <button data-lang="en"><img class="flag" src="assets/flags/gb.svg" alt="EN"> EN</button>
+        <button data-lang="hu"><img class="flag" src="assets/flags/hu.svg" alt="HU"> HU</button>
       </div>
       <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
         <span class="hamburger"></span>
       </button>
       <div class="side-drawer" id="side-drawer">
-        <ul class="nav-links">
+        <div class="lang-switcher styled-lang-switcher">
+          <button data-lang="ro" class="active"><img class="flag" src="assets/flags/ro.svg" alt="RO"> RO</button>
+          <button data-lang="en"><img class="flag" src="assets/flags/gb.svg" alt="EN"> EN</button>
+          <button data-lang="hu"><img class="flag" src="assets/flags/hu.svg" alt="HU"> HU</button>
+        </div>
+        <ul class="drawer-nav-links">
           <li><a href="#home">Acasă</a></li>
           <li><a href="#about">Despre Noi</a></li>
           <li><a href="#products">Produse/Servicii</a></li>
           <li><a href="#testimonials">Testimoniale</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="lang-switcher styled-lang-switcher">
-          <button data-lang="ro" class="active"><img class="flag" src="flags/ro.svg" alt="RO"> RO</button>
-          <button data-lang="en"><img class="flag" src="flags/gb.svg" alt="EN"> EN</button>
-          <button data-lang="hu"><img class="flag" src="flags/hu.svg" alt="HU"> HU</button>
-        </div>
       </div>
     </nav>
   </header>
@@ -57,7 +57,7 @@
         <a href="#contact" class="cta-btn">Începe acum</a>
       </div>
       <div class="hero-image">
-        <img src="hero-image.jpg" alt="Business Solutions">
+        <img src="assets/images/hero-image.jpg" alt="Business Solutions">
       </div>
     </section>
 
@@ -70,12 +70,12 @@
         <h3>Echipa Noastră</h3>
         <div class="team-members">
           <div class="team-member">
-            <img class="img-visible" src="team1.jpg" alt="Jane Doe" onerror="this.src='https://via.placeholder.com/90?text=Jane'">
+            <img class="img-visible" src="assets/images/team1.jpg" alt="Jane Doe" onerror="this.src='https://via.placeholder.com/90?text=Jane'">
             <h4>Jane Doe</h4>
             <p>CEO – Lider vizionar cu peste 20 de ani experiență în tehnologie.</p>
           </div>
           <div class="team-member">
-            <img class="img-visible" src="team2.jpg" alt="John Smith" onerror="this.src='https://via.placeholder.com/90?text=John'">
+            <img class="img-visible" src="assets/images/team2.jpg" alt="John Smith" onerror="this.src='https://via.placeholder.com/90?text=John'">
             <h4>John Smith</h4>
             <p>CTO – Expert în soluții de afaceri scalabile.</p>
           </div>
@@ -85,8 +85,8 @@
       <div class="achievements">
         <h3>Realizări & Premii</h3>
         <ul>
-          <li><img class="img-visible" src="award1.svg" alt="ISO 9001" onerror="this.src='https://via.placeholder.com/36?text=ISO'"> Certificare ISO 9001</li>
-          <li><img class="img-visible" src="award2.svg" alt="Best Startup" onerror="this.src='https://via.placeholder.com/36?text=Best'"> Premiul Best Startup 2023</li>
+          <li><img class="img-visible" src="assets/images/award1.svg" alt="ISO 9001" onerror="this.src='https://via.placeholder.com/36?text=ISO'"> Certificare ISO 9001</li>
+          <li><img class="img-visible" src="assets/images/award2.svg" alt="Best Startup" onerror="this.src='https://via.placeholder.com/36?text=Best'"> Premiul Best Startup 2023</li>
         </ul>
       </div>
     </section>
@@ -96,12 +96,12 @@
       <h2>Produsele & Serviciile Noastre</h2>
       <div class="product-list">
         <div class="product-card">
-          <img class="img-visible" src="product1.jpg" alt="Cloud Solutions" onerror="this.src='https://via.placeholder.com/120?text=Produs1'">
+          <img class="img-visible" src="assets/images/product1.jpg" alt="Cloud Solutions" onerror="this.src='https://via.placeholder.com/120?text=Produs1'">
           <h4>Soluții Cloud</h4>
           <p>Infrastructură cloud scalabilă, sigură și fiabilă pentru afacerea ta.</p>
         </div>
         <div class="product-card">
-          <img class="img-visible" src="product2.jpg" alt="Consulting" onerror="this.src='https://via.placeholder.com/120?text=Consulting'">
+          <img class="img-visible" src="assets/images/product2.jpg" alt="Consulting" onerror="this.src='https://via.placeholder.com/120?text=Consulting'">
           <h4>Consultanță</h4>
           <p>Consultanță de specialitate pentru optimizarea proceselor și tehnologiilor de business.</p>
         </div>
@@ -114,11 +114,11 @@
       <h2>Galerie Foto</h2>
       <div class="gallery-list">
         <!-- Example business images -->
-        <img class="img-visible" src="gallery1.jpg" alt="Business Office Exterior" onerror="this.src='https://via.placeholder.com/320x180?text=Office+Exterior'">
-        <img class="img-visible" src="gallery2.jpg" alt="Team Working Together" onerror="this.src='https://via.placeholder.com/320x180?text=Team+Work'">
-        <img class="img-visible" src="gallery3.jpg" alt="Modern Workspace" onerror="this.src='https://via.placeholder.com/320x180?text=Workspace'">
-        <img class="img-visible" src="gallery4.jpg" alt="Business Event" onerror="this.src='https://via.placeholder.com/320x180?text=Event'">
-        <img class="img-visible" src="gallery5.jpg" alt="Customer Interaction" onerror="this.src='https://via.placeholder.com/320x180?text=Customer'">
+        <img class="img-visible" src="assets/images/gallery1.jpg" alt="Business Office Exterior" onerror="this.src='https://via.placeholder.com/320x180?text=Office+Exterior'">
+        <img class="img-visible" src="assets/images/gallery2.jpg" alt="Team Working Together" onerror="this.src='https://via.placeholder.com/320x180?text=Team+Work'">
+        <img class="img-visible" src="assets/images/gallery3.jpg" alt="Modern Workspace" onerror="this.src='https://via.placeholder.com/320x180?text=Workspace'">
+        <img class="img-visible" src="assets/images/gallery4.jpg" alt="Business Event" onerror="this.src='https://via.placeholder.com/320x180?text=Event'">
+        <img class="img-visible" src="assets/images/gallery5.jpg" alt="Customer Interaction" onerror="this.src='https://via.placeholder.com/320x180?text=Customer'">
         <!-- Add more images as needed -->
       </div>
       <div class="gallery-carousel-preview" id="gallery-carousel-preview"></div>
@@ -131,8 +131,8 @@
         <!-- Highlighted review will be rendered here by JS -->
       </div>
       <div class="client-logos" id="client-logos">
-        <img class="img-visible client-logo" src="client1.jpg" alt="Client 1" data-client="1" onerror="this.src='https://via.placeholder.com/48?text=C1'">
-        <img class="img-visible client-logo" src="client2.jpg" alt="Client 2" data-client="2" onerror="this.src='https://via.placeholder.com/48?text=C2'">
+        <img class="img-visible client-logo" src="assets/images/client1.jpg" alt="Client 1" data-client="1" onerror="this.src='https://via.placeholder.com/48?text=C1'">
+        <img class="img-visible client-logo" src="assets/images/client2.jpg" alt="Client 2" data-client="2" onerror="this.src='https://via.placeholder.com/48?text=C2'">
         <!-- Add more client logos as needed -->
       </div>
     </section>

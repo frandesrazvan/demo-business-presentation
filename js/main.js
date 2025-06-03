@@ -161,13 +161,22 @@ function setLanguage(lang) {
   console.log('Switching language to:', lang);
   const t = translations[lang];
   if (!t) return;
-  // Navbar
+  // Navbar (desktop)
   const navLinks = document.querySelectorAll('.nav-links a');
   navLinks[0].textContent = t.home;
   navLinks[1].textContent = t.about;
   navLinks[2].textContent = t.products;
   navLinks[3].textContent = t.testimonials;
   navLinks[4].textContent = t.contact;
+  // Navbar (mobile/drawer)
+  const drawerNavLinks = document.querySelectorAll('.drawer-nav-links a');
+  if (drawerNavLinks.length >= 5) {
+    drawerNavLinks[0].textContent = t.home;
+    drawerNavLinks[1].textContent = t.about;
+    drawerNavLinks[2].textContent = t.products;
+    drawerNavLinks[3].textContent = t.testimonials;
+    drawerNavLinks[4].textContent = t.contact;
+  }
   // Hero
   const heroTitle = document.querySelector('.hero-content h1');
   if (heroTitle) heroTitle.textContent = t.heroTitle;

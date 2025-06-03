@@ -488,11 +488,33 @@ footer {
 }
 @media (max-width: 700px) {
   .navbar {
+    display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 2000;
     padding: 0.7rem 1rem;
+    min-height: 64px;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .nav-toggle {
+    display: block;
+    position: static;
+    margin: 0;
+    align-self: center;
+  }
+  .navbar-center {
+    display: none !important;
+  }
+  .achievements ul {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
   }
   .logo {
     z-index: 1201;
@@ -501,45 +523,45 @@ footer {
     margin-right: auto;
   }
   .side-drawer {
-    position: fixed;
-    top: 0;
-    right: -260px;
-    left: auto;
-    width: 220px;
-    height: 100vh;
-    background: #fff;
-    box-shadow: -2px 0 24px rgba(44,83,100,0.12);
-    z-index: 1200;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 2.5rem 1.2rem 1.2rem 1.2rem;
-    transition: right 0.3s cubic-bezier(.4,2,.6,1);
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    height: 100vh;
+    box-sizing: border-box;
   }
   .side-drawer.open {
     right: 0;
   }
+  .side-drawer .styled-lang-switcher {
+    margin-bottom: 2rem;
+    align-items: flex-start;
+  }
   .side-drawer .nav-links {
+    display: none !important;
+  }
+  .side-drawer .drawer-nav-links {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
     width: 100%;
-    margin-bottom: 2rem;
+    margin: 0;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
   }
-  .side-drawer .styled-lang-switcher {
-    flex-direction: column;
-    gap: 0.7rem;
-    margin-left: 0;
-    width: 100%;
+  .side-drawer .drawer-nav-links a {
+    text-decoration: none;
+    color: #1a1a2e;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.2rem 0;
+    transition: color 0.2s;
   }
-  .nav-toggle {
-    display: block;
-    z-index: 1202;
-    margin-left: 0.5rem;
-  }
-  .navbar > .nav-links,
-  .navbar > .styled-lang-switcher {
-    display: none !important;
+  .side-drawer .drawer-nav-links a:hover,
+  .side-drawer .drawer-nav-links a:focus {
+    color: #0072ff;
   }
   .footer-links {
     display: flex;
@@ -795,12 +817,14 @@ html, body {
   opacity: 0.7;
   border: 2px solid transparent;
   border-radius: 12px;
-  transition: border 0.2s, opacity 0.2s, box-shadow 0.2s;
+  transition: border 0.2s, opacity 0.2s, box-shadow 0.2s, filter 0.2s;
+  filter: grayscale(1) brightness(0.9);
 }
 .client-logo.active {
   opacity: 1;
   border: 2.5px solid #0072ff;
   box-shadow: 0 4px 16px #0072ff33;
+  filter: none;
 }
 
 .gallery-carousel-preview {
