@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional business presentation website for showcasing company identity, products, and credibility.">
+  <title>Business Presentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="fade-in-down">
+    <nav class="navbar">
+      <div class="logo"><img src="logo.svg" alt="Company Logo"></div>
+      <ul class="nav-links">
+        <li><a href="#home">Acasă</a></li>
+        <li><a href="#about">Despre Noi</a></li>
+        <li><a href="#products">Produse/Servicii</a></li>
+        <li><a href="#testimonials">Testimoniale</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher styled-lang-switcher">
+        <button data-lang="ro" class="active"><span class="flag">🇷🇴</span> RO</button>
+        <button data-lang="en"><span class="flag">🇬🇧</span> EN</button>
+        <button data-lang="hu"><span class="flag">🇭🇺</span> HU</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Homepage Hero Section -->
+    <section id="home" class="hero gradient-bg fade-in">
+      <div class="hero-content">
+        <h1>Împuternicim afacerea ta cu soluții inovatoare</h1>
+        <p>Ajutăm companiile să crească prin tehnologie de ultimă generație și consultanță de specialitate.</p>
+        <a href="#contact" class="cta-btn">Începe acum</a>
+      </div>
+      <div class="hero-image">
+        <img src="hero-image.jpg" alt="Business Solutions">
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about glassmorphism fade-in">
+      <h2>Despre Noi</h2>
+      <p>Fondată în 2010, <strong>Numele Companiei</strong> este dedicată furnizării de soluții digitale excepționale care stimulează succesul afacerii.</p>
+      <div class="mission">Misiunea noastră este să împuternicim organizațiile prin tehnologie, inovație și integritate.</div>
+      <div class="team">
+        <h3>Echipa Noastră</h3>
+        <div class="team-members">
+          <div class="team-member">
+            <img class="img-visible" src="team1.jpg" alt="Jane Doe" onerror="this.src='https://via.placeholder.com/90?text=Jane'">
+            <h4>Jane Doe</h4>
+            <p>CEO – Lider vizionar cu peste 20 de ani experiență în tehnologie.</p>
+          </div>
+          <div class="team-member">
+            <img class="img-visible" src="team2.jpg" alt="John Smith" onerror="this.src='https://via.placeholder.com/90?text=John'">
+            <h4>John Smith</h4>
+            <p>CTO – Expert în soluții de afaceri scalabile.</p>
+          </div>
+          <!-- Add more team members as needed -->
+        </div>
+      </div>
+      <div class="achievements">
+        <h3>Realizări & Premii</h3>
+        <ul>
+          <li><img class="img-visible" src="award1.svg" alt="ISO 9001" onerror="this.src='https://via.placeholder.com/36?text=ISO'"> Certificare ISO 9001</li>
+          <li><img class="img-visible" src="award2.svg" alt="Best Startup" onerror="this.src='https://via.placeholder.com/36?text=Best'"> Premiul Best Startup 2023</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Products/Services Section -->
+    <section id="products" class="products fade-in">
+      <h2>Produsele & Serviciile Noastre</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img class="img-visible" src="product1.jpg" alt="Cloud Solutions" onerror="this.src='https://via.placeholder.com/120?text=Produs1'">
+          <h4>Soluții Cloud</h4>
+          <p>Infrastructură cloud scalabilă, sigură și fiabilă pentru afacerea ta.</p>
+        </div>
+        <div class="product-card">
+          <img class="img-visible" src="product2.jpg" alt="Consulting" onerror="this.src='https://via.placeholder.com/120?text=Consulting'">
+          <h4>Consultanță</h4>
+          <p>Consultanță de specialitate pentru optimizarea proceselor și tehnologiilor de business.</p>
+        </div>
+        <!-- Add more products/services as needed -->
+      </div>
+      <div class="case-studies">
+        <h3>Studii de Caz</h3>
+        <div class="case-study">
+          <img class="img-visible" src="case1.jpg" alt="Acme Corp" onerror="this.src='https://via.placeholder.com/70?text=Acme'">
+          <div>
+            <h4>Acme Corp</h4>
+            <p>Eficiență crescută cu 40% prin sistemul nostru ERP personalizat.</p>
+          </div>
+        </div>
+        <!-- Add more case studies as needed -->
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials fade-in">
+      <h2>Ce spun clienții noștri</h2>
+      <div class="testimonials-slider">
+        <div class="testimonial">
+          <p>"Servicii și suport excepțional!"</p>
+          <span>- John Smith, CTO, BigCo</span>
+        </div>
+        <!-- Add more testimonials as needed -->
+      </div>
+      <div class="client-logos">
+        <img class="img-visible" src="client1.svg" alt="Client 1" onerror="this.src='https://via.placeholder.com/48?text=C1'">
+        <img class="img-visible" src="client2.svg" alt="Client 2" onerror="this.src='https://via.placeholder.com/48?text=C2'">
+        <!-- Add more client logos as needed -->
+      </div>
+    </section>
+
+    <!-- Blog/News Section -->
+    <section id="blog" class="blog fade-in">
+      <h2>Informații & Noutăți</h2>
+      <div class="blog-list">
+        <article class="blog-post">
+          <img class="img-visible" src="blog1.jpg" alt="5 Tendințe în Tehnologia de Afaceri" onerror="this.src='https://via.placeholder.com/320x180?text=Blog'">
+          <h3>5 Tendințe în Tehnologia de Afaceri</h3>
+          <p>Rămâi în față cu cele mai noi perspective din tehnologia de afaceri...</p>
+          <a href="#" class="read-more">Citește mai mult</a>
+        </article>
+        <!-- Add more blog posts as needed -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact glassmorphism fade-in">
+      <h2>Contactează-ne</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Numele tău" required>
+        <input type="email" name="email" placeholder="Emailul tău" required>
+        <input type="tel" name="phone" placeholder="Telefon (opțional)">
+        <textarea name="message" placeholder="Mesajul tău" required></textarea>
+        <button type="submit">Trimite mesajul</button>
+      </form>
+      <div class="contact-info">
+        <p><strong>Email:</strong> info@company.com</p>
+        <p><strong>Telefon:</strong> (123) 456-7890</p>
+        <p><strong>Adresă:</strong> Str. Business 123, Oraș, Țară</p>
+      </div>
+      <div class="map">
+        <!-- Example Google Maps embed -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537363153169!3d-37.81627917975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f1f1f1%3A0x5045675218ce6e0!2sCompany+Location!5e0!3m2!1sen!2sau!4v1614031234567" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fade-in-up">
+    <div class="footer-links">
+      <a href="privacy-policy.html">Politica de Confidențialitate</a>
+      <a href="terms-of-service.html">Termeni și Condiții</a>
+    </div>
+    <p>&copy; 2024 Numele Companiei. Toate drepturile rezervate.</p>
+  </footer>
+</body>
+</html> 
