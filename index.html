@@ -7,27 +7,43 @@
   <title>Business Presentation</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
   <script defer src="js/main.js"></script>
 </head>
 <body>
   <header class="fade-in-down">
     <nav class="navbar">
-      <div class="logo"><img src="logo.svg" alt="Company Logo"></div>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#home">Acasă</a></li>
-        <li><a href="#about">Despre Noi</a></li>
-        <li><a href="#products">Produse/Servicii</a></li>
-        <li><a href="#testimonials">Testimoniale</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="lang-switcher styled-lang-switcher">
+      <div class="logo"><img src="logo.jpg" alt="Company Logo"></div>
+      <div class="navbar-center">
+        <ul class="nav-links">
+          <li><a href="#home">Acasă</a></li>
+          <li><a href="#about">Despre Noi</a></li>
+          <li><a href="#products">Produse/Servicii</a></li>
+          <li><a href="#testimonials">Testimoniale</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="styled-lang-switcher lang-switcher">
         <button data-lang="ro" class="active"><img class="flag" src="flags/ro.svg" alt="RO"> RO</button>
         <button data-lang="en"><img class="flag" src="flags/gb.svg" alt="EN"> EN</button>
         <button data-lang="hu"><img class="flag" src="flags/hu.svg" alt="HU"> HU</button>
+      </div>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <div class="side-drawer" id="side-drawer">
+        <ul class="nav-links">
+          <li><a href="#home">Acasă</a></li>
+          <li><a href="#about">Despre Noi</a></li>
+          <li><a href="#products">Produse/Servicii</a></li>
+          <li><a href="#testimonials">Testimoniale</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="lang-switcher styled-lang-switcher">
+          <button data-lang="ro" class="active"><img class="flag" src="flags/ro.svg" alt="RO"> RO</button>
+          <button data-lang="en"><img class="flag" src="flags/gb.svg" alt="EN"> EN</button>
+          <button data-lang="hu"><img class="flag" src="flags/hu.svg" alt="HU"> HU</button>
+        </div>
       </div>
     </nav>
   </header>
@@ -105,21 +121,18 @@
         <img class="img-visible" src="gallery5.jpg" alt="Customer Interaction" onerror="this.src='https://via.placeholder.com/320x180?text=Customer'">
         <!-- Add more images as needed -->
       </div>
+      <div class="gallery-carousel-preview" id="gallery-carousel-preview"></div>
     </section>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials fade-in">
       <h2>Ce spun clienții noștri</h2>
-      <div class="testimonials-slider">
-        <div class="testimonial">
-          <p>"Servicii și suport excepțional!"</p>
-          <span>- John Smith, CTO, BigCo</span>
-        </div>
-        <!-- Add more testimonials as needed -->
+      <div class="testimonials-highlight" id="testimonials-highlight">
+        <!-- Highlighted review will be rendered here by JS -->
       </div>
-      <div class="client-logos">
-        <img class="img-visible" src="client1.svg" alt="Client 1" onerror="this.src='https://via.placeholder.com/48?text=C1'">
-        <img class="img-visible" src="client2.svg" alt="Client 2" onerror="this.src='https://via.placeholder.com/48?text=C2'">
+      <div class="client-logos" id="client-logos">
+        <img class="img-visible client-logo" src="client1.jpg" alt="Client 1" data-client="1" onerror="this.src='https://via.placeholder.com/48?text=C1'">
+        <img class="img-visible client-logo" src="client2.jpg" alt="Client 2" data-client="2" onerror="this.src='https://via.placeholder.com/48?text=C2'">
         <!-- Add more client logos as needed -->
       </div>
     </section>
