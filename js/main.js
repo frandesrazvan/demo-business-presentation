@@ -163,17 +163,17 @@ function setLanguage(lang) {
   if (!t) return;
   // Navbar (desktop)
   const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks[0].textContent = t.home;
-  navLinks[1].textContent = t.about;
-  navLinks[2].textContent = t.products;
+  navLinks[0].textContent = t.about;
+  navLinks[1].textContent = t.products;
+  navLinks[2].textContent = t.galleryTitle;
   navLinks[3].textContent = t.testimonials;
   navLinks[4].textContent = t.contact;
   // Navbar (mobile/drawer)
   const drawerNavLinks = document.querySelectorAll('.drawer-nav-links a');
   if (drawerNavLinks.length >= 5) {
-    drawerNavLinks[0].textContent = t.home;
-    drawerNavLinks[1].textContent = t.about;
-    drawerNavLinks[2].textContent = t.products;
+    drawerNavLinks[0].textContent = t.about;
+    drawerNavLinks[1].textContent = t.products;
+    drawerNavLinks[2].textContent = t.galleryTitle;
     drawerNavLinks[3].textContent = t.testimonials;
     drawerNavLinks[4].textContent = t.contact;
   }
@@ -347,10 +347,12 @@ if (thankYouClose && thankYouPopup) {
 function setupSideDrawerNav() {
   const navToggle = document.getElementById('nav-toggle');
   const sideDrawer = document.getElementById('side-drawer');
-  const navLinks = sideDrawer.querySelectorAll('.nav-links a');
+  // Use drawer-nav-links for burger menu links
+  const navLinks = sideDrawer.querySelectorAll('.drawer-nav-links a');
   function closeDrawer() {
     sideDrawer.classList.remove('open');
     document.body.style.overflow = '';
+    if (navToggle) navToggle.classList.remove('open');
   }
   navToggle.addEventListener('click', function() {
     sideDrawer.classList.toggle('open');
@@ -364,6 +366,29 @@ function setupSideDrawerNav() {
     link.addEventListener('click', closeDrawer);
   });
 }
+
+// Responsive burger menu for <1200px
+function handleBurgerMenuDisplay() {
+  const navToggle = document.getElementById('nav-toggle');
+  const sideDrawer = document.getElementById('side-drawer');
+  const navbarCenter = document.querySelector('.navbar-center');
+  const langSwitcher = document.querySelector('.styled-lang-switcher.lang-switcher');
+  if (!navToggle || !sideDrawer || !navbarCenter || !langSwitcher) return;
+  if (window.innerWidth <= 1200) {
+    navToggle.style.display = 'block';
+    sideDrawer.style.display = 'flex';
+    navbarCenter.style.display = 'none';
+    langSwitcher.style.display = 'none';
+  } else {
+    navToggle.style.display = 'none';
+    sideDrawer.style.display = 'none';
+    navbarCenter.style.display = 'flex';
+    langSwitcher.style.display = 'flex';
+    sideDrawer.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+window.addEventListener('resize', handleBurgerMenuDisplay);
 
 // Gallery carousel preview logic
 function setupGalleryCarouselPreview() {
@@ -394,9 +419,53 @@ function setupGalleryCarouselPreview() {
   });
 }
 
+// Add upper arrow button for desktop only
+function addScrollToTopArrow() {
+  // Always show the arrow, regardless of screen size
+  if (document.getElementById('scroll-to-top-arrow')) return;
+  const arrow = document.createElement('button');
+  arrow.id = 'scroll-to-top-arrow';
+  arrow.innerHTML = '↑';
+  arrow.style.position = 'fixed';
+  arrow.style.right = '32px';
+  arrow.style.bottom = '32px';
+  arrow.style.top = '';
+  arrow.style.transform = '';
+  arrow.style.zIndex = '2000';
+  arrow.style.background = 'linear-gradient(90deg, #00c6ff, #0072ff)';
+  arrow.style.color = '#fff';
+  arrow.style.border = 'none';
+  arrow.style.borderRadius = '50%';
+  arrow.style.width = '48px';
+  arrow.style.height = '48px';
+  arrow.style.fontSize = '2rem';
+  arrow.style.boxShadow = '0 4px 16px #0072ff22';
+  arrow.style.cursor = 'pointer';
+  arrow.style.display = 'flex';
+  arrow.style.alignItems = 'center';
+  arrow.style.justifyContent = 'center';
+  arrow.style.transition = 'opacity 0.2s';
+  arrow.title = 'Scroll to top';
+  arrow.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  // Hide/show on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      arrow.style.opacity = '1';
+    } else {
+      arrow.style.opacity = '0';
+    }
+  });
+  arrow.style.opacity = '0';
+  document.body.appendChild(arrow);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   setupTestimonialSwap();
   renderHighlightedTestimonial(1, document.querySelector('.lang-switcher button.active').dataset.lang);
   setupSideDrawerNav();
   setupGalleryCarouselPreview();
+  addScrollToTopArrow();
+  handleBurgerMenuDisplay();
 }); 
